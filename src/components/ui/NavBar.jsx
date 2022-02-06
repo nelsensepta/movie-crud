@@ -30,9 +30,7 @@ const NavBar = () => {
         <button className="nav-btn" onClick={() => setBtn(!btn)}>
           <FiAlignRight />
         </button>
-        <nav
-          className={btn ? "navigation active-nav activeScroll" : "navigation"}
-        >
+        <nav className={btn ? "navigation active-nav " : "navigation"}>
           <ul>
             <li>
               <NavLink

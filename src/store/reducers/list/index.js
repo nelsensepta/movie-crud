@@ -84,8 +84,6 @@ const Lists = (state = initialState, action) => {
       };
       const sInd = +source.droppableId;
       const dInd = +destination.droppableId;
-      console.log("Sind", sInd);
-      console.log("dInd", dInd);
       if (sInd === dInd) {
         const items = reorder(
           newState[sInd].movies,
@@ -121,22 +119,17 @@ const Lists = (state = initialState, action) => {
           list.id !== action.payload.id && list.name !== action.payload.name
         );
       });
-      console.log(newState);
       return newState;
     case DELETE_MOVIE:
       newState = [...state];
       index = state.findIndex((list) => list.id === action.payload.idList);
-
       if (index !== -1) {
         newMovie = newState[index].movies.filter((movie) => {
           return movie.id !== action.payload.idMovie;
         });
-
         newState[index].movies = newMovie;
       }
-
       return newState;
-
     default:
       return state;
   }

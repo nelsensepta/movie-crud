@@ -3,7 +3,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  /* min-height: 20px; */
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -12,7 +11,7 @@
   -moz-transition: all ease-out 0.6s;
   -o-transition: all ease-out 0.6s;
   transition: all ease-out 0.6s;
-  padding: 1rem;
+  padding: 1rem 3rem;
 }
 
 .activeScroll {
@@ -55,9 +54,9 @@
 .btn-close {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .header {
-    padding: 1rem 3rem;
+    padding: 1rem;
   }
 }
 
@@ -69,23 +68,20 @@
   .header::-webkit-scrollbar {
     display: none;
   }
-
   .nav-btn {
     display: inline-block;
     font-size: 2rem;
   }
-
   .btn-close {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 19px;
+    top: 19px;
     display: block;
     font-size: 2rem;
   }
-
   .navigation {
     position: absolute;
-    left: 700px;
+    left: 600px;
     display: flex;
     width: 100%;
     top: 0;
@@ -93,7 +89,8 @@
     -moz-transition: all ease-out 0.4s;
     -o-transition: all ease-out 0.4s;
     transition: all ease-out 0.4s;
-    background-color: rgba(20, 11, 11, 0.932);
+    background-color: var(--bg-header);
+    /* opacity: 0.91; */
     height: 100vh;
     z-index: 9999;
   }

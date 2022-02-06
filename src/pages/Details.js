@@ -66,9 +66,6 @@ const Details = ({ movieError, movieDetails, movieLoading, similar }) => {
             </div>
           </div>
           <div className="similar-content">
-            {/* <div className="section mb-3">
-              <VideoList id={item.id} />
-            </div> */}
             <MovieList title="Similar" movies={similar} />
           </div>
         </>

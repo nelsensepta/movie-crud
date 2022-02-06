@@ -41,7 +41,6 @@ const WatchList = ({ lists, updateMovie, deleteMovie }) => {
     if (e.target.id) {
       setUpdateName(e.target.id);
     } else {
-      console.log("Masuk");
       setUpdateName("");
     }
   };
@@ -49,9 +48,8 @@ const WatchList = ({ lists, updateMovie, deleteMovie }) => {
   const handleDeleteList = (e) => {
     const id = e.target.id;
     const name = e.target.name;
-
     if (id && name) {
-      alert("Are You Sure ?");
+      // alert("Are You Sure ?");
       dispatch(deleteList({ id, name }));
     }
   };

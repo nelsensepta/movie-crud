@@ -48,7 +48,7 @@ export const updateMovie =
 export const updateList =
   ({ id, name }) =>
   (dispatch) => {
-    dispatch(setAlert(`List has been Update`, "success"));
+    dispatch(setAlert("List has been Update", "success"));
     dispatch({
       type: UPDATE_LIST,
       payload: {
@@ -60,7 +60,7 @@ export const updateList =
 export const deleteList =
   ({ id, name }) =>
   (dispatch) => {
-    dispatch(setAlert(`List has been Delete`, "success"));
+    dispatch(setAlert("List has been Delete", "success"));
     dispatch({
       type: DELETE_LIST,
       payload: {
@@ -80,12 +80,3 @@ export const deleteMovie = (idList, idMovie) => (dispatch) => {
     },
   });
 };
-
-// export const isAdd = (id) => (dispatch) => {
-//   dispatch({
-//     type: IS_ADD,
-//     payload: {
-//       id,
-//     },
-//   });
-// };
