@@ -1,0 +1,53 @@
+/* Modal */
+.modal {
+  width: 500px;
+  text-align: center;
+  background-color: rgb(29, 27, 27);
+  position: fixed;
+  bottom: -500px;
+  left: 50%;
+  /* bottom: 50%; */
+  margin-left: -250px;
+  transition: all 0.5s ease;
+  border-radius: 20px;
+  padding: 40px;
+  z-index: 95;
+}
+.modal.active {
+  bottom: 50%;
+}
+.underlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: -90;
+}
+.underlay.active {
+  opacity: 1;
+  z-index: 90;
+}
+
+/* Btn-Wrapper */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .modal {
+    width: 300px;
+    padding: 10px;
+    margin-left: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}

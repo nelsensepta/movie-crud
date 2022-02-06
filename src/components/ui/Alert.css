@@ -1,0 +1,12 @@
+.alert {
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  z-index: 9999;
+}
+
+.alert-success {
+  background-color: rgb(154, 247, 154);
+  transition: ease-in-out 0.5;
+}

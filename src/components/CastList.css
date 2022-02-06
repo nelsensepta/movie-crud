@@ -1,0 +1,30 @@
+.video {
+  margin-bottom: 3rem;
+}
+
+.video-title {
+  margin-bottom: 1.5rem;
+}
+.casts {
+  display: flex;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.casts::-webkit-scrollbar {
+  display: none;
+}
+.casts-item {
+  margin-top: 0.5rem;
+  margin-right: 10px;
+  width: 120px;
+}
+
+.casts-item-img {
+  object-fit: cover;
+  height: 160px;
+}
+.casts-item-name {
+  font-size: 0.8rem;
+}

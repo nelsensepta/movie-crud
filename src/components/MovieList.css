@@ -1,0 +1,39 @@
+.card-title {
+  width: 100%;
+  align-items: flex-start;
+}
+
+.title {
+  text-align: start;
+  font-size: 1.75rem;
+  margin-top: 1rem;
+}
+.card-movies {
+  z-index: 900;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  padding: 2rem 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.card-movies::-webkit-scrollbar {
+  display: none;
+}
+
+/* Media Query */
+@media screen and (max-width: 1024px) {
+  .content-movies {
+    margin-top: 0;
+  }
+  .card-title {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
