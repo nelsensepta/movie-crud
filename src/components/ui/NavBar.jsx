@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { FaGg } from "react-icons/fa";
 import { FiAlignRight, FiX } from "react-icons/fi";
 import { useState } from "react";

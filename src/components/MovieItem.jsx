@@ -7,7 +7,6 @@ import { AiFillStar, AiFillHeart } from "react-icons/ai";
 import { addMovie, newList } from "../store/actions/listAction";
 import Input from "../components/ui/Input";
 import Modal from "./ui/Modal";
-import { Link } from "react-router-dom";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { v1 as uuid } from "uuid";
 
@@ -16,8 +15,6 @@ const MovieItem = ({ movie, scrollPosition }) => {
   const [add, setAdd] = useState(false);
   const [list, setList] = useState(false);
   const [nameList, setNameList] = useState("");
-  const [isLoaded, setLoadingState] = useState(false);
-  const [ok, setOk] = useState(false);
 
   const dispatch = useDispatch();
   const handleAdd = (id) => {

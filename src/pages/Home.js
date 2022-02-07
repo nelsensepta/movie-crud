@@ -11,7 +11,6 @@ import {
   getTrendingMovies,
   getUpComingMovies,
 } from "../store/actions/movieAction";
-import Alert from "../components/ui/Alert";
 
 const Home = ({
   moviesTopRated,

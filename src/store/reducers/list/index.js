@@ -43,10 +43,10 @@ const Lists = (state = initialState, action) => {
         if (duplicat) {
           return newState;
         } else {
-          newState[index].movies.push(movieAdd);
+          return newState[index].movies.push(movieAdd);
         }
       }
-
+      return newState;
     case UPDATE_MOVIE:
       newState = [...state];
       if (!action.payload.draggableId) return newState;

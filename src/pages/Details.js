@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Details.css";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ImageServices } from "../services/APIservice";
 import {
   getDetails,
