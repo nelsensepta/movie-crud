@@ -1,4 +1,3 @@
-import { store } from "../..";
 import {
   GET_TRENDING_MOVIES,
   GET_TOP_RATED_MOVIES,
@@ -19,7 +18,6 @@ const initialState = {
 const Movie = (state = initialState, action) => {
   switch (action.type) {
     case GET_TRENDING_MOVIES:
-      // store.subscribe((e) => console.log(e));
       return {
         ...state,
         movies: { ...state.movies, trending: action.payload.data },

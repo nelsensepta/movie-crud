@@ -36,10 +36,6 @@ const Lists = (state = initialState, action) => {
       index = newState.findIndex((value) => value.id === action.payload.id);
       let movieAdd = { ...action.payload.movies, idAdd: action.payload.isAdd };
 
-      // newState.map((list) => {
-      //   console.log(list.movies.filter((movie) => movie.id !== movieAdd.id));
-      // });
-
       if (index !== -1) {
         const duplicat = newState[index].movies.some(
           (movie) => movie.id === action.payload.movies.id
