@@ -14,8 +14,10 @@ export function saveToLocalStorage(state) {
 function loadFromLocalStorage() {
   try {
     const serialisedState = localStorage.getItem("persistantState");
-    return serialisedState !== null ? JSON.parse(serialisedState) : undefined;
+    if (serialisedState === null) return undefined;
+    return JSON.parse(serialisedState);
   } catch (e) {
+    console.log(e);
     return undefined;
   }
 }

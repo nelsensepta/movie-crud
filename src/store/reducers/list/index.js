@@ -13,14 +13,14 @@ const Lists = (state = initialState, action) => {
   let newState;
   let index;
   let newMovie;
+  console.log(newState);
   switch (action.type) {
     case NEW_LIST:
+      newState = [...state];
       if (!state.length) {
-        newState = [...state];
         newState.push(action.payload);
         return newState;
       } else {
-        newState = [...state];
         const duplicat = newState.some(
           (list) => list.name === action.payload.name
         );
@@ -30,12 +30,10 @@ const Lists = (state = initialState, action) => {
         newState.push(action.payload);
         return newState;
       }
-
     case ADD_MOVIE:
       newState = [...state];
       index = newState.findIndex((value) => value.id === action.payload.id);
       let movieAdd = { ...action.payload.movies, idAdd: action.payload.isAdd };
-
       if (index !== -1) {
         const duplicat = newState[index].movies.some(
           (movie) => movie.id === action.payload.movies.id
@@ -43,7 +41,7 @@ const Lists = (state = initialState, action) => {
         if (duplicat) {
           return newState;
         } else {
-          return newState[index].movies.push(movieAdd);
+          newState[index].movies.push(movieAdd);
         }
       }
       return newState;
