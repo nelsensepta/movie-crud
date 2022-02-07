@@ -1,0 +1,12 @@
+.not-found {
+  height: 100%;
+  text-align: center;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.not-found-title {
+  font-size: 3rem;
+}
